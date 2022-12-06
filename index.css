@@ -2,13 +2,26 @@
     font-family: 'Times New Roman', Times, serif;
     color:#f4f4f4;
 }
+
+
 header{
   position: fixed;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #f4f3ef;
   background-color: black;
-  
+  animation-name: drag;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 
+}
+@keyframes drag {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(1000px);
+  }
 }
 h1{
     margin-bottom: 10pt;
@@ -17,7 +30,7 @@ h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     font-weight: 200;
-    background-color: #234636b6;
+    background-color: #000000b6;
     color: #f4f4f4
 
 }
@@ -44,6 +57,10 @@ ul{
   margin-top: 5%;
   margin-right: 50px;
   float: right;
+  animation-name: profileani;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
  
   footer{
@@ -52,4 +69,13 @@ ul{
   }
 button{
   color: black;
+}
+
+@keyframes profileani {
+  from {
+opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }

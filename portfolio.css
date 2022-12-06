@@ -4,13 +4,15 @@ body {
   margin: 0px;
   background-color:#234636b6;
 }
+body {background-image: url('grönt.jpg');
+}
 a {
   color: #ffffff86;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns:repeat(1fr 4fr 1fr);
   grid-template-rows: 8rem 1fr 2rem;
   grid-template-areas:
     "header1 header2 header3"
@@ -18,49 +20,59 @@ a {
     "footer footer footer";
 }
 img {
-  max-height: 300px;
+  max-height: 20rem
 
 }
 .about-me {
   background-color:#13251dc7 ;
+  display: grid;
   grid-area: header1;
   color: #ffffffee;
   font-size: 20pt;
-  padding-top: 100px;
+  align-items: flex-end;
 }
 
 .jönköping {
   background-color:#13251dc7 ;
+  display: grid;
   grid-area: header3;
   color: #ffffffee;
   font-size: 20pt;
-  padding-top: 100px;
+  align-items: flex-end
 }
 
 header {
+  display: grid;
    background-color:#13251dc7 ;
   grid-area: header2;
   color: #ffffffee;
   font-size: 100pt;
+  animation-name: headline-ani;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes headline-ani {
+  from {
+color: #13251dc7;
+  }
+  to {
+    color: #ffffff;
+  }
+  
 }
 
 .content {
   background-color: #ffffffc7;
+  display: grid;
   grid-area: content;
-  display:flex;
+  display: flex;
   flex-wrap:wrap;
-  justify-content: center;
   justify-items: center;
   display: inline-block;
-  padding-left: 70px;
-  padding-top: 20px;
 }
 
-.flex-item {
-  flex: 1;
-  justify-content: center;
-  justify-items: center;
-}
 
 .footer {
   background-color: #13251db6;
@@ -68,3 +80,21 @@ header {
   color: #ffffff86;
 }
 
+@media screen and (max-width: 800px){
+.container {
+  display: grid;
+  grid-template-rows: 8rem 1fr 2rem ;
+ grid-template-columns: 1fr 4fr 1fr;
+ grid-template-areas: 
+ "header1 header2 header3"
+ "content content content"
+ "footer footer footer";
+}
+header{
+  font-size: 80pt;
+  display: flex;
+  display: grid;
+  align-items: end;
+}
+
+}
