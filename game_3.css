@@ -1,0 +1,17 @@
+body{
+    background-image: url(bakgrund1.avif);
+    background-repeat: no-repeat;
+}
+img{
+    max-width: 5rem;
+}
+h1{
+    font-size: 10pt;
+    background-color: aliceblue;
+    max-width: 10rem;
+}
+#result {
+    font-size: 20pt;
+    background-color: aliceblue;
+    max-width: 10rem;
+}

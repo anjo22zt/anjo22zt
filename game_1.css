@@ -1,0 +1,57 @@
+*
+
+body{
+    background-image: url(bakgrund2.avif);
+    background-repeat: no-repeat;
+}
+
+.content{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-template-areas: 
+    "text . ."
+    "nyckel2 lås nyckel1"
+    ". nyckel3 button";
+}
+.text {
+    grid-area: text;
+    font-size: 8pt;
+    max-width: 15rem;
+    background-color: aliceblue;
+}
+#nyckel1 {
+    max-width: 1rem;
+    z-index: 15;
+    grid-area: nyckel1;
+    align-self: end;
+
+}
+
+#nyckel2 {
+    max-width: 10px;
+    z-index: 15;
+    grid-area: nyckel2;
+    align-self: start;
+}
+
+#nyckel3 {
+    max-width: 10px;
+    z-index: 15;
+    grid-area: nyckel3;
+    align-self: start;
+}
+
+#las{
+    grid-area: lås;
+    z-index: 15;
+    max-width: 4rem;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+#button{
+    grid-area: button;
+    align-self: end;
+}
